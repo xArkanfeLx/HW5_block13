@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="База данных"
+        android:background="@color/purple_500"
+        android:theme="@style/Theme.AppCompat.NoActionBar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/nameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите имя"
+            android:inputType="textPersonName"/>
+        <EditText
+            android:id="@+id/aegET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите возраст"
+            android:inputType="phone"/>
+        <Spinner
+            android:id="@+id/roleS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/saveBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить данные"/>
+        <Button
+            android:id="@+id/getBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Получить данные"/>
+        <Button
+            android:id="@+id/deleteBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Удалить данные"/>
+        <ListView
+            android:id="@+id/personsLV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/person_list_item"/>
+    </LinearLayout>
+
+</LinearLayout>
